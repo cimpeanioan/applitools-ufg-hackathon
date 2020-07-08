@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
 import java.util.List;
 
 public class TraditionalTests extends BaseTest {
@@ -30,23 +29,15 @@ public class TraditionalTests extends BaseTest {
     @Test(priority = 1)
     public void task1CrossDeviceElementsTest() {
         SoftAssert softAssertion = new SoftAssert();
-        WebElement profileIcon = driver.findElement(profileIconCss);
-        softAssertion.assertTrue(hackathonReporter(1, "CDET - Profile icon", profileIconCss.toString(), profileIcon.isDisplayed()), "The Profile icon is not displayed");
-
-        WebElement wishList = driver.findElement(wishListIconCss);
-        softAssertion.assertTrue(hackathonReporter(1, "CDET - WishList Icon", wishListIconCss.toString(), wishList.isDisplayed()), "The WishList icon is not displayed");
-
-        WebElement buttonSearchMobile = driver.findElement(btnSearchMobClass);
-        softAssertion.assertTrue(hackathonReporter(1, "CDET - Search Btn (Mobile)", btnSearchMobClass.toString(), buttonSearchMobile.isDisplayed()), "The Search btn for Mobile is not displayed");
+        softAssertion.assertTrue(hackathonReporter(1, "CDET - Profile icon", profileIconCss.toString(), utils.isDisplayed(profileIconCss)), "The Profile icon is not displayed");
+        softAssertion.assertTrue(hackathonReporter(1, "CDET - WishList Icon", wishListIconCss.toString(), utils.isDisplayed(wishListIconCss)), "The WishList icon is not displayed");
+        softAssertion.assertTrue(hackathonReporter(1, "CDET - Search Btn (Mobile)", btnSearchMobClass.toString(), utils.isDisplayed(btnSearchMobClass)), "The Search btn for Mobile is not displayed");
 
         WebElement showFilterButton = driver.findElement(showFilterBtnId);
         showFilterButton.click();
 
-        WebElement filterBtn = driver.findElement(bottomLeftFilterBtnId);
-        softAssertion.assertTrue(hackathonReporter(1, "CDET - Left Filter Button", bottomLeftFilterBtnId.toString(), filterBtn.isDisplayed()), "The bottom left filter button is not displayed");
-
-        WebElement addToCartFirstItem = driver.findElement(addToCardFirstItemCss);
-        softAssertion.assertTrue(hackathonReporter(1, "CDET - Add To Cart (low res)", addToCardFirstItemCss.toString(), addToCartFirstItem.isDisplayed()), "The 'add to cart' button is not present");
+        softAssertion.assertTrue(hackathonReporter(1, "CDET - Left Filter Button", bottomLeftFilterBtnId.toString(), utils.isDisplayed(bottomLeftFilterBtnId)), "The bottom left filter button is not displayed");
+        softAssertion.assertTrue(hackathonReporter(1, "CDET - Add To Cart (low res)", addToCardFirstItemCss.toString(), utils.isDisplayed(addToCardFirstItemCss)), "The 'add to cart' button is not present");
         softAssertion.assertAll();
     }
 
@@ -67,14 +58,9 @@ public class TraditionalTests extends BaseTest {
         List<WebElement> gridItemsResults = driver.findElements(gridItemsXpath);
         softAssertion.assertTrue(hackathonReporter(2, "FR - count results", gridItemsXpath.toString(), gridItemsResults.size() == 2), "The number of black shoes should be 2 but Found " + gridItemsResults.size());
 
-        WebElement favoriteBtnFirstItem = driver.findElement(addToFavoriteFirstItemCss);
-        softAssertion.assertTrue(hackathonReporter(2, "FR - Add To Favorite (low res)", addToFavoriteFirstItemCss.toString(), favoriteBtnFirstItem.isDisplayed()), "The 'add to favorite' button is not present");
-
-        WebElement addToCompareFirstItem = driver.findElement(addToCompareFirstItemCss);
-        softAssertion.assertTrue(hackathonReporter(2, "FR - Add To Compare (low res)", addToCompareFirstItemCss.toString(), addToCompareFirstItem.isDisplayed()), "The 'add to compare' button is not present");
-
-        WebElement addToCartFirstItem = driver.findElement(addToCardFirstItemCss);
-        softAssertion.assertTrue(hackathonReporter(2, "FR - Add To Cart (low res)", addToCardFirstItemCss.toString(), addToCartFirstItem.isDisplayed()), "The 'add to cart' button is not present");
+        softAssertion.assertTrue(hackathonReporter(2, "FR - Add To Favorite (low res)", addToFavoriteFirstItemCss.toString(), utils.isDisplayed(addToFavoriteFirstItemCss)), "The 'add to favorite' button is not present");
+        softAssertion.assertTrue(hackathonReporter(2, "FR - Add To Compare (low res)", addToCompareFirstItemCss.toString(), utils.isDisplayed(addToCompareFirstItemCss)), "The 'add to compare' button is not present");
+        softAssertion.assertTrue(hackathonReporter(2, "FR - Add To Cart (low res)", addToCardFirstItemCss.toString(), utils.isDisplayed(addToCardFirstItemCss)), "The 'add to cart' button is not present");
         softAssertion.assertAll();
     }
 
@@ -82,7 +68,8 @@ public class TraditionalTests extends BaseTest {
     public void task3ProductDetailsTest() {
         SoftAssert softAssertion = new SoftAssert();
 
-        driver.findElement(showFilterBtnId).click();
+        if (driver.findElement(showFilterBtnId).isDisplayed())
+            driver.findElement(showFilterBtnId).click();
         driver.findElement(blackOptionXpath).click();
         driver.findElement(bottomLeftFilterBtnId).click();
 
@@ -94,9 +81,9 @@ public class TraditionalTests extends BaseTest {
         softAssertion.assertTrue(hackathonReporter(3, "PDtest - Product Name", shoeName.toString(), driver.findElement(shoeName).getText().equals("Appli Air x Night")), "Shoe name is not correct");
         softAssertion.assertTrue(hackathonReporter(3, "PDtest - Price", price.toString(), driver.findElement(price).getText().equals(expectedPrice)), "Shoe price is not correct");
 
-        softAssertion.assertTrue(hackathonReporter(3, "PDtest - Add To Favorite (low res)", addToFavoriteFirstItemCss.toString(), driver.findElement(addToFavoriteFirstItemCss).isDisplayed()), "The 'add to favorite' button is not present");
-        softAssertion.assertTrue(hackathonReporter(3, "PDtest - Add To Compare (low res)", addToCompareFirstItemCss.toString(), driver.findElement(addToCompareFirstItemCss).isDisplayed()), "The 'add to compare' button is not present");
-        softAssertion.assertTrue(hackathonReporter(3, "PDtest - Add To Cart (low res)", addToCardFirstItemCss.toString(), driver.findElement(addToCardFirstItemCss).isDisplayed()), "The 'add to cart' button is not present");
+        softAssertion.assertTrue(hackathonReporter(3, "PDtest - Add To Favorite (low res)", addToFavoriteFirstItemCss.toString(), utils.isDisplayed(addToFavoriteFirstItemCss)), "The 'add to favorite' button is not present");
+        softAssertion.assertTrue(hackathonReporter(3, "PDtest - Add To Compare (low res)", addToCompareFirstItemCss.toString(), utils.isDisplayed(addToCompareFirstItemCss)), "The 'add to compare' button is not present");
+        softAssertion.assertTrue(hackathonReporter(3, "PDtest - Add To Cart (low res)", addToCardFirstItemCss.toString(), utils.isDisplayed(addToCardFirstItemCss)), "The 'add to cart' button is not present");
         softAssertion.assertAll();
     }
 

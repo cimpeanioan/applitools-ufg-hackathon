@@ -1,6 +1,7 @@
 package utils;
 
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Utility {
@@ -20,6 +21,16 @@ public class Utility {
             return optionalWait.until(condition);
         } catch (Exception e) {
             return null;
+        }
+    }
+
+    public boolean isDisplayed(By by) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, 3);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+            return driver.findElement(by).isDisplayed();
+        } catch (NoSuchElementException | TimeoutException | StaleElementReferenceException e) {
+            return false;
         }
     }
 

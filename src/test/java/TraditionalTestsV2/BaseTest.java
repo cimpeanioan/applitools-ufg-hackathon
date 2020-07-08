@@ -1,10 +1,11 @@
 package TraditionalTestsV2;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import utils.DriverFactory;
+import utils.Utility;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -20,6 +21,7 @@ public class BaseTest {
     public static String device;
     public static String browser;
     String url = "https://demo.applitools.com/gridHackathonV2.html";    // V1
+    Utility utils;
 
     @Parameters({"browserType", "width", "height", "device"})
     @BeforeMethod
@@ -32,9 +34,10 @@ public class BaseTest {
         driver = new DriverFactory(browser).webDriver;
         System.out.println(" Running on " + driver.getCapabilities().getBrowserName() + " " + driver.getCapabilities().getVersion());
         driver.get(url);
+        utils = new Utility(driver);
     }
 
-    @AfterMethod
+    @AfterTest
     public void tearDown() {
         if (driver != null)
             driver.quit();
