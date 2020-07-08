@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Traditional Tests" verbose="1" configfailurepolicy="continue">
+    <!--  Modern-->
+    <test name="Tests V2 - Modern">
+        <parameter name="appUrl" value="https://demo.applitools.com/gridHackathonV2.html"/>
+        <classes>
+            <class name="ModernTestsV1.All3Tasks"></class>
+        </classes>
+    </test>
+
+</suite>

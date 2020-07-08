@@ -1,0 +1,73 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Traditional Tests" verbose="1" configfailurepolicy="continue">
+    <!--  Traditional-->
+    <test name="Tests V1 - Traditional - CHROME 1200 x 700 on Laptop">
+        <parameter name="browserType" value="CHROME"/>
+        <parameter name="width" value="1200"/>
+        <parameter name="height" value="700"/>
+        <parameter name="device" value="Laptop"/>
+        <classes>
+            <class name="TraditionalTestsV1.TraditionalTests"></class>
+        </classes>
+    </test>
+
+    <test name="Tests V1 - Traditional - FIREFOX 1200 x 700 on Laptop">
+        <parameter name="browserType" value="FIREFOX"/>
+        <parameter name="width" value="1200"/>
+        <parameter name="height" value="700"/>
+        <parameter name="device" value="Laptop"/>
+        <classes>
+            <class name="TraditionalTestsV1.TraditionalTests"></class>
+        </classes>
+    </test>
+
+    <test name="Tests V1 - Traditional - EDGE_CHROMIUM 1200 x 700 on Laptop">
+        <parameter name="browserType" value="EDGE"/>
+        <parameter name="width" value="1200"/>
+        <parameter name="height" value="700"/>
+        <parameter name="device" value="Laptop"/>
+        <classes>
+            <class name="TraditionalTestsV1.TraditionalTests"></class>
+        </classes>
+    </test>
+
+    <test name="Tests V1 - Traditional - CHROME 768 x 700 on Tablet">
+        <parameter name="browserType" value="CHROME"/>
+        <parameter name="width" value="768"/>
+        <parameter name="height" value="700"/>
+        <parameter name="device" value="Tablet"/>
+        <classes>
+            <class name="TraditionalTestsV1.TraditionalTests"></class>
+        </classes>
+    </test>
+
+    <test name="Tests V1 - Traditional - FIREFOX 768 x 700 on Tablet">
+        <parameter name="browserType" value="FIREFOX"/>
+        <parameter name="width" value="768"/>
+        <parameter name="height" value="700"/>
+        <parameter name="device" value="Tablet"/>
+        <classes>
+            <class name="TraditionalTestsV1.TraditionalTests"></class>
+        </classes>
+    </test>
+    <test name="Tests V1 - Traditional - EDGE_CHROMIUM 768 x 700 on Tablet">
+        <parameter name="browserType" value="EDGE"/>
+        <parameter name="width" value="768"/>
+        <parameter name="height" value="700"/>
+        <parameter name="device" value="Tablet"/>
+        <classes>
+            <class name="TraditionalTestsV1.TraditionalTests"></class>
+        </classes>
+    </test>
+
+    <test name="Tests V1 - Traditional - CHROME 500 x 700 on Mobile">
+        <parameter name="browserType" value="CHROME"/>
+        <parameter name="width" value="500"/>
+        <parameter name="height" value="700"/>
+        <parameter name="device" value="Mobile"/>
+        <classes>
+            <class name="TraditionalTestsV1.TraditionalTests"></class>
+        </classes>
+    </test>
+
+</suite>

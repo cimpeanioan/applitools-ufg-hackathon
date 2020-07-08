@@ -1,0 +1,24 @@
+Task: 1, Test Name: CDET - Profile icon, DOM Id: By.cssSelector: .access_link, Browser: CHROME, Viewport: 1200 x 700, Device: Laptop, Status: Pass
+Task: 1, Test Name: CDET - WishList Icon, DOM Id: By.cssSelector: .wishlist, Browser: CHROME, Viewport: 1200 x 700, Device: Laptop, Status: Pass
+Task: 1, Test Name: CDET - Search Btn (Mobile), DOM Id: By.className: btn_search_mob, Browser: CHROME, Viewport: 1200 x 700, Device: Laptop, Status: Fail
+Task: 1, Test Name: CDET - Profile icon, DOM Id: By.cssSelector: .access_link, Browser: FIREFOX, Viewport: 1200 x 700, Device: Laptop, Status: Pass
+Task: 1, Test Name: CDET - WishList Icon, DOM Id: By.cssSelector: .wishlist, Browser: FIREFOX, Viewport: 1200 x 700, Device: Laptop, Status: Pass
+Task: 1, Test Name: CDET - Search Btn (Mobile), DOM Id: By.className: btn_search_mob, Browser: FIREFOX, Viewport: 1200 x 700, Device: Laptop, Status: Fail
+Task: 1, Test Name: CDET - Profile icon, DOM Id: By.cssSelector: .access_link, Browser: CHROME, Viewport: 768 x 700, Device: Tablet, Status: Pass
+Task: 1, Test Name: CDET - WishList Icon, DOM Id: By.cssSelector: .wishlist, Browser: CHROME, Viewport: 768 x 700, Device: Tablet, Status: Fail
+Task: 1, Test Name: CDET - Search Btn (Mobile), DOM Id: By.className: btn_search_mob, Browser: CHROME, Viewport: 768 x 700, Device: Tablet, Status: Fail
+Task: 1, Test Name: CDET - Left Filter Button, DOM Id: By.id: filterBtn, Browser: CHROME, Viewport: 768 x 700, Device: Tablet, Status: Fail
+Task: 1, Test Name: CDET - Add To Cart (low res), DOM Id: By.cssSelector: li a[data-original-title='Add to cart'], Browser: CHROME, Viewport: 768 x 700, Device: Tablet, Status: Pass
+Task: 2, Test Name: FR - Left Filter Button, DOM Id: By.id: filterBtn, Browser: CHROME, Viewport: 768 x 700, Device: Tablet, Status: Fail
+Task: 1, Test Name: CDET - Profile icon, DOM Id: By.cssSelector: .access_link, Browser: FIREFOX, Viewport: 768 x 700, Device: Tablet, Status: Pass
+Task: 1, Test Name: CDET - WishList Icon, DOM Id: By.cssSelector: .wishlist, Browser: FIREFOX, Viewport: 768 x 700, Device: Tablet, Status: Fail
+Task: 1, Test Name: CDET - Search Btn (Mobile), DOM Id: By.className: btn_search_mob, Browser: FIREFOX, Viewport: 768 x 700, Device: Tablet, Status: Fail
+Task: 1, Test Name: CDET - Left Filter Button, DOM Id: By.id: filterBtn, Browser: FIREFOX, Viewport: 768 x 700, Device: Tablet, Status: Fail
+Task: 1, Test Name: CDET - Add To Cart (low res), DOM Id: By.cssSelector: li a[data-original-title='Add to cart'], Browser: FIREFOX, Viewport: 768 x 700, Device: Tablet, Status: Pass
+Task: 2, Test Name: FR - Left Filter Button, DOM Id: By.id: filterBtn, Browser: FIREFOX, Viewport: 768 x 700, Device: Tablet, Status: Fail
+Task: 1, Test Name: CDET - Profile icon, DOM Id: By.cssSelector: .access_link, Browser: CHROME, Viewport: 500 x 700, Device: Mobile, Status: Pass
+Task: 1, Test Name: CDET - WishList Icon, DOM Id: By.cssSelector: .wishlist, Browser: CHROME, Viewport: 500 x 700, Device: Mobile, Status: Fail
+Task: 1, Test Name: CDET - Search Btn (Mobile), DOM Id: By.className: btn_search_mob, Browser: CHROME, Viewport: 500 x 700, Device: Mobile, Status: Pass
+Task: 1, Test Name: CDET - Left Filter Button, DOM Id: By.id: filterBtn, Browser: CHROME, Viewport: 500 x 700, Device: Mobile, Status: Fail
+Task: 1, Test Name: CDET - Add To Cart (low res), DOM Id: By.cssSelector: li a[data-original-title='Add to cart'], Browser: CHROME, Viewport: 500 x 700, Device: Mobile, Status: Pass
+Task: 2, Test Name: FR - Left Filter Button, DOM Id: By.id: filterBtn, Browser: CHROME, Viewport: 500 x 700, Device: Mobile, Status: Fail
